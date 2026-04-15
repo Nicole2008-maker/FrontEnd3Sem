@@ -1,141 +1,222 @@
 @font-face {
-    font-family: Architect;
-    src: url(./fonts/Gruppo/Gruppo-Regular.ttf);
+    font-family: Gantari;
+    src: url(./Fontes/Gantari/Gantari-VariableFont_wght.ttf);
+
 }
 
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
-body{
+body {
     background-image: linear-gradient(to right bottom, #18a2c9, #72c3bd);
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 
+    /* border: 1px solid white; */
 }
 
-.container--flex-column{
+.container--flex-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-.header{
+
+
+
+.header {
     padding: 10px 0;
-    /*height: 80px;*/
+    /* height: 80px; */
+    /* border: 1px solid rgb(255, 0, 0); */
 }
 
-.header__logo{
-   width: 100px;
-
-
+.header__logo {
+    width: 100px;
 }
 
-.header__title{
-  font-family: Architect;
-  color: #DED27C;
+
+.header__title {
+    font-family: Gantari;
+    color: #ded27c;
 }
 
-.header__text{
+.header__text {
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
 
-
-.contact-form{
+.contact-form {
     padding: 20px 0;
-   
-    
+
 }
 
-.contact-form__linha{
+.contact-form__linha {
     display: flex;
-   
-    
-}
+    margin-bottom: 15px;
 
-.contact-form__col-a, .contact-form__col-b{
-    
-  
 }
 
 .contact-form__col-a {
-    width: 10%;
-    align-items: center;
     display: flex;
+    align-items: center;
+    width: 10%;
+
 }
 
-.contact-form__col-b{
- width: 90%;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+
+.contact-form__col-b {
+    display: flex;
+    /* gap: 30px; */
+    justify-content: space-between;
+    width: 90%;
+
 }
 
-.contact-form__label{
+
+
+
+
+
+.contact-form__label {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-weight: 600;
 }
 
-.contact-form__input{
+.contact-form__input {
     color: #18a2c9;
-    padding: 5px 10px;
     border: none;
     border-radius: 3px;
     outline: none;
+    padding: 5px 10px;
+
 
     transition: background-color 0.4s, color 0.4s, border 0.4s;
-    margin-top: 10px;
 }
 
-
-
-.contact-form__input:focus{
+.contact-form__input:focus {
     background-color: #72c3bd;
     color: white;
     border: 1px solid white;
 }
 
-.contact-form__input--metade{
-    width: 48%;
+/*Modificadores*/
+.contact-form__input--metade {
+    width: 49%;
     height: 35px;
 }
 
-.contact-form__input--enorme{
+.contact-form__input--Inteiro {
     width: 100%;
     height: 35px;
 }
 
-.contact-form__input--tres{
-   width: 28%;
-   height: 35px;
+.contact-form__input--1Terco {
+    width: 30%;
+    height: 35px;
 }
 
-.contact-form__input--dois{
-width: 18%;
-height: 35px;
+.contact-form__input--1quarto {
+    width: 24%;
+    height: 35px;
+}
+
+.contact-form__input--textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.contact-form__col-button {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+
 }
 
 
-@media screen and (max-width: 991px){
 
-    
+.contact-form__button {
+    width: 36%;
+    height: 55px;
+
+    color: white;
+    background-color: #72c3bd;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.4s;
+
+    border-radius: 3px;
+    outline: none;
+    padding: 5px 10px;
+    margin: 7px;
+
 }
 
-@media screen and (max-width: 767px){
-    
+.contact-form__button:hover {
+    background-color: #18a2c9;
 }
 
+
+/* Breakpoints - tablets*/
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .header__logo {
+        width: 150px;
+    }
+
+    .header__text {
+        font-size: larger;
+    }
+
+    .contact-form__label {
+        font-size: small;
+    }
+}
+
+
+
+/*Breakpoints - smartphones*/
+@media screen and (max-width: 767px) {
+
+    .contact-form__input {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .contact-form__col-b {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        
+
+
+
+    }
+
+    .contact-form__label {
+        display: none;
+    }
+}

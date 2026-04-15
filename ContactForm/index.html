@@ -5,108 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./Css/style.css">
 </head>
 
 <body>
-
     <header class="header">
         <div class="container container--flex-column">
-            <img class="header__logo" src="./images/Logotipo.svg" alt="">
+            <img class="header__logo" src="/Image/Vector.svg" alt="">
 
             <h1 class="header__title">Contact Form</h1>
+
             <p class="header__text">Insira os dados do contato e clique em cadastrar!</p>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <form class="contact-form" action="">
+            <form action="" class="contact-form">
                 <div class="contact-form__linha">
                     <div class="contact-form__col-a">
-
                         <label class="contact-form__label" for="nome">Nome</label>
                     </div>
+
                     <div class="contact-form__col-b">
-
-
-
                         <input class="contact-form__input contact-form__input--metade" name="nome" id="nome"
                             placeholder="Nome" type="text">
-                        <input class="contact-form__input contact-form__input--metade" name="sobrenome" id="sobrenome"
+
+                        <input class="contact-form__input contact-form__input--metade" name="Sobrenome" id="Sobrenome"
                             placeholder="Sobrenome" type="text">
+
                     </div>
                 </div>
 
+
+
                 <div class="contact-form__linha">
                     <div class="contact-form__col-a">
-
                         <label class="contact-form__label" for="E-mail">E-mail</label>
                     </div>
+
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--enorme" name="E-mail" id="E-mail"
-                            type="E-mail" placeholder="E-mail">
+                        <input class="contact-form__input contact-form__input--Inteiro" name="E-mail" id="E-mail"
+                            placeholder="E-mail" type="text">
 
                     </div>
-
-
-
-
                 </div>
+
+
 
                 <div class="contact-form__linha">
                     <div class="contact-form__col-a">
-
                         <label class="contact-form__label" for="Telefone">Telefone</label>
                     </div>
+
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--tres" name="Telefone" id="Telefone"
-                            type="Telefone" placeholder="+55">
-                        <input class="contact-form__input contact-form__input--tres" name="Telefone" id="Telefone"
-                            type="Telefone" placeholder="ddd">
-                        <input class="contact-form__input contact-form__input--tres" name="Telefone" id="Telefone"
-                            type="Telefone" placeholder="ex: 99999-9999">
+                        <input class="contact-form__input contact-form__input--1Terco" name="Telefone" id="Telefone"
+                            placeholder="55" type="number">
+
+
+                        <input class="contact-form__input contact-form__input--1Terco" name="Telefone" id="Telefone"
+                            placeholder="ddd" type="number">
+
+
+                        <input class="contact-form__input contact-form__input--1Terco" name="Telefone" id="Telefone"
+                            placeholder="ex:9999-9999" type="number">
 
                     </div>
                 </div>
 
                 <div class="contact-form__linha">
                     <div class="contact-form__col-a">
-
-                        <label class="contact-form__label" for="Endereço">Endereço</label>
+                        <label class="contact-form__label" for="Endereco">Endereço</label>
                     </div>
+
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--dois" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="cep:9999-999">
-                        <input class="contact-form__input contact-form__input--metade" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="Rua Lá De Casa">
-                        <input class="contact-form__input contact-form__input--tres" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="ex: 555">
-                    </div>
+                        <input class="contact-form__input contact-form__input--1quarto " name="Endereco" id="Endereco"
+                            placeholder="Cep" type="number">
+
+
+                        <input class="contact-form__input contact-form__input--metade" name="Endereco" id="Endereco"
+                            placeholder="Rua la de casa" type="text">
+
+
+                        <input class="contact-form__input contact-form__input--1quarto " name="Endereco" id="Endereco"
+                            placeholder="ex:555" type="number">
 
                     </div>
+                </div>
 
-                    <div class="contact-form__linha">
+                <div class="contact-form__linha">
                     <div class="contact-form__col-a">
-
-                       
+                        <label class="contact-form__label" for="Endereco"></label>
                     </div>
+
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--tres" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="Apto. 12 Bloco X">
-                        <input class="contact-form__input contact-form__input--tres" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="Bairro">
-                        <input class="contact-form__input contact-form__input--tres" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="Cidade">
-                            </div>
-                            </div>
+                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                            placeholder="Apartamento ou Bloco" type="text">
 
-                            
-                        <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--tres" name="Endereço" id="Endereço"
-                            type="Endereço" placeholder="Estado">    
 
+                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                            placeholder="Bairro" type="text">
+
+
+                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                            placeholder="Cidade" type="text">
+
+                    </div>
+                </div>
+
+                  <div class="contact-form__linha">
+                    <div class="contact-form__col-a">
+                        <label class="contact-form__label" for="Endereco"></label>
+                    </div>
+
+                    <div class="contact-form__col-b">
+                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                            placeholder="Estado" type="text">
+
+                    </div>
+                </div>
+
+
+                <div class="contact-form__linha">
+                    <div class="contact-form__col-a">
+                        <label class="contact-form__label" for="E-mail">Anotações</label>
+                    </div>
+
+                    <div class="contact-form__col-b">
+                        <textarea class="contact-form__input contact-form__input--textarea" name="Anotaçoes" id="Anotaçoes" placeholder="Todas suas Anotações aqui..."></textarea>
+
+                    </div>
+                </div>
+
+                <div class="contact-form__linha">
+                    <div class="contact-form__col-a">
+                        <label class="contact-form__label" for="E-mail"></label>
+                    </div>
+
+                    <div class="contact-form__col-button">
+                        <button class="contact-form__button" type="button" id="cadastrar" name="cadastrar">
+                            Cadastrar
+                        </button>
+                        
+                        <button class="contact-form__button" type="reset" id="limpar" name="limpar">
+                            Limpar
+                        </button>
+
+                    </div>
+                </div>
 
             </form>
         </div>
