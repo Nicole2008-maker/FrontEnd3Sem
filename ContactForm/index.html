@@ -143,7 +143,8 @@
                     </div>
 
                     <div class="contact-form__col-button">
-                        <button class="contact-form__button" type="button" id="cadastrar" name="cadastrar">
+                        <button onclick="minhaFuncao()" class="contact-form__button" type="button" id="cadastrar" name="cadastrar">
+                            
                             Cadastrar
                         </button>
                         
@@ -157,6 +158,57 @@
             </form>
         </div>
     </main>
+
+    <script>
+        function minhaFuncao(){
+          let nome = document.getElementById("nome").value.trim();
+          let sobrenome = document.getElementById("Sobrenome").value.trim();
+          let email = document.getElementById("E-mail").value.trim();
+          let telefone = document.getElementById("Telefone").value.trim();
+      
+
+        if(nome.length == 0){
+            formError("nome");
+        } else
+    {
+        reiniciaBorda("nome");
+    }
+
+        if(sobrenome.length == 0){
+            formError("Sobrenome");
+        } else
+    {
+        reiniciaBorda("Sobrenome");
+    }
+
+        if(email.length == 0){
+            formError("E-mail");
+        } else
+    {
+        reiniciaBorda("E-mail");
+    }
+
+        if(telefone.length == 0){
+            formError("Telefone");
+        } else
+    {
+        reiniciaBorda("Telefone");
+    }
+
+
+          //*console.log(`Aluno: ${nome} ${sobrenome}| Email: ${email} !`);
+
+        }
+
+
+        function formError(fildId){
+            document.getElementById(fildId).style.border = "1px solid red";
+        }
+
+        function reiniciaBorda(fildId){
+            document.getElementById(fildId).style.border = "none";
+        }
+    </script>
 </body>
 
 </html>

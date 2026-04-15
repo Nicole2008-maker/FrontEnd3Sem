@@ -25,7 +25,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 
-    /* border: 1px solid white; */
 }
 
 .container--flex-column {
@@ -193,7 +192,7 @@ body {
 
 
 
-/*Breakpoints - smartphones*/
+
 @media screen and (max-width: 767px) {
 
     .contact-form__input {
@@ -220,3 +219,4 @@ body {
         display: none;
     }
 }
+
