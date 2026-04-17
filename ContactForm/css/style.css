@@ -25,6 +25,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 
+    /* border: 1px solid white; */
 }
 
 .container--flex-column {
@@ -150,8 +151,8 @@ body {
 
 
 .contact-form__button {
-    width: 36%;
-    height: 55px;
+    width: 100%;
+    height: 40px;
 
     color: white;
     background-color: #72c3bd;
@@ -192,7 +193,7 @@ body {
 
 
 
-
+/*Breakpoints - smartphones*/
 @media screen and (max-width: 767px) {
 
     .contact-form__input {
@@ -205,18 +206,27 @@ body {
     .contact-form__col-b {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         gap: 10px;
-        
-
-
-
     }
 
-    .contact-form__label {
+    .contact-form__col-a{
         display: none;
     }
-}
 
+    .contact-form__linha{
+        display: flex;
+        justify-content: center;
+        
+    }
+  
+  .header__logo{
+     width: 100px;
+  }
+
+  .header__text{
+    font-size: 15px;
+    text-align: center;
+  }
+  
+   
+}

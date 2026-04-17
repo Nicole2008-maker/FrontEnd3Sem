@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <div class="container container--flex-column">
-            <img class="header__logo" src="/Image/Vector.svg" alt="">
+            <img class="header__logo" src="./images/Logotipo.svg" alt="">
 
             <h1 class="header__title">Contact Form</h1>
 
@@ -59,15 +59,15 @@
                     </div>
 
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--1Terco" name="Telefone" id="Telefone"
+                        <input class="contact-form__input contact-form__input--1Terco" name="prefixo" id="prefixo"
                             placeholder="55" type="number">
 
 
-                        <input class="contact-form__input contact-form__input--1Terco" name="Telefone" id="Telefone"
+                        <input class="contact-form__input contact-form__input--1Terco" name="ddd" id="ddd"
                             placeholder="ddd" type="number">
 
 
-                        <input class="contact-form__input contact-form__input--1Terco" name="Telefone" id="Telefone"
+                        <input class="contact-form__input contact-form__input--1Terco" name="numero" id="numero"
                             placeholder="ex:9999-9999" type="number">
 
                     </div>
@@ -79,16 +79,17 @@
                     </div>
 
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--1quarto " name="Endereco" id="Endereco"
-                            placeholder="Cep" type="number">
+                        <input class="contact-form__input contact-form__input--1quarto " name="cep" id="cep"
+                            placeholder="Cep: 9999-999" type="number"
+                            onblur="buscarEndereco(this.value)">
 
 
-                        <input class="contact-form__input contact-form__input--metade" name="Endereco" id="Endereco"
-                            placeholder="Rua la de casa" type="text">
+                        <input class="contact-form__input contact-form__input--metade" name="ruaC" id="ruaC"
+                            placeholder="Rua lá de casa" type="text">
 
 
-                        <input class="contact-form__input contact-form__input--1quarto " name="Endereco" id="Endereco"
-                            placeholder="ex:555" type="number">
+                        <input class="contact-form__input contact-form__input--1quarto " name="numeroendereco"
+                            id="numeroendereco" placeholder="Ex:555" type="number">
 
                     </div>
                 </div>
@@ -99,27 +100,27 @@
                     </div>
 
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                        <input class="contact-form__input contact-form__input--1Terco" name="ape" id="ape"
                             placeholder="Apartamento ou Bloco" type="text">
 
 
-                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                        <input class="contact-form__input contact-form__input--1Terco" name="bairro" id="bairro"
                             placeholder="Bairro" type="text">
 
 
-                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                        <input class="contact-form__input contact-form__input--1Terco" name="cidade" id="cidade"
                             placeholder="Cidade" type="text">
 
                     </div>
                 </div>
 
-                  <div class="contact-form__linha">
+                <div class="contact-form__linha">
                     <div class="contact-form__col-a">
                         <label class="contact-form__label" for="Endereco"></label>
                     </div>
 
                     <div class="contact-form__col-b">
-                        <input class="contact-form__input contact-form__input--1Terco" name="Endereco" id="Endereco"
+                        <input class="contact-form__input contact-form__input--1Terco" name="estado" id="estado"
                             placeholder="Estado" type="text">
 
                     </div>
@@ -132,7 +133,8 @@
                     </div>
 
                     <div class="contact-form__col-b">
-                        <textarea class="contact-form__input contact-form__input--textarea" name="Anotaçoes" id="Anotaçoes" placeholder="Todas suas Anotações aqui..."></textarea>
+                        <textarea class="contact-form__input contact-form__input--textarea" name="Anotacoes"
+                            id="Anotacoes" placeholder="Suas Anotações aqui..."></textarea>
 
                     </div>
                 </div>
@@ -143,11 +145,12 @@
                     </div>
 
                     <div class="contact-form__col-button">
-                        <button onclick="minhaFuncao()" class="contact-form__button" type="button" id="cadastrar" name="cadastrar">
-                            
+                        <button class="contact-form__button" type="button" id="cadastrar" name="cadastrar"
+                            onclick="validarFormulario()">
+
                             Cadastrar
                         </button>
-                        
+
                         <button class="contact-form__button" type="reset" id="limpar" name="limpar">
                             Limpar
                         </button>
@@ -159,56 +162,10 @@
         </div>
     </main>
 
-    <script>
-        function minhaFuncao(){
-          let nome = document.getElementById("nome").value.trim();
-          let sobrenome = document.getElementById("Sobrenome").value.trim();
-          let email = document.getElementById("E-mail").value.trim();
-          let telefone = document.getElementById("Telefone").value.trim();
-      
-
-        if(nome.length == 0){
-            formError("nome");
-        } else
-    {
-        reiniciaBorda("nome");
-    }
-
-        if(sobrenome.length == 0){
-            formError("Sobrenome");
-        } else
-    {
-        reiniciaBorda("Sobrenome");
-    }
-
-        if(email.length == 0){
-            formError("E-mail");
-        } else
-    {
-        reiniciaBorda("E-mail");
-    }
-
-        if(telefone.length == 0){
-            formError("Telefone");
-        } else
-    {
-        reiniciaBorda("Telefone");
-    }
 
 
-          //*console.log(`Aluno: ${nome} ${sobrenome}| Email: ${email} !`);
+    <script src="js/script.js"></script>
 
-        }
-
-
-        function formError(fildId){
-            document.getElementById(fildId).style.border = "1px solid red";
-        }
-
-        function reiniciaBorda(fildId){
-            document.getElementById(fildId).style.border = "none";
-        }
-    </script>
 </body>
 
 </html>
