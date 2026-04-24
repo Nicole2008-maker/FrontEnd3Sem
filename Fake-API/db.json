@@ -1,0 +1,60 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Nicole Samara",
+      "idade": 18
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "IMC": 30.477966223242138,
+      "textoSituacao": "Obesidade Grau I",
+      "id": "4qgiq0QaNpI"
+    },
+    {
+      "nome": "Nicole",
+      "altura": 1.64,
+      "peso": 77,
+      "IMC": 28.628792385484836,
+      "textoSituacao": "Sobrepeso",
+      "id": "ciMaVt7ZiDE"
+    },
+    {
+      "nome": "Jennifer",
+      "altura": 1.64,
+      "peso": 50,
+      "IMC": 18.590124925639504,
+      "textoSituacao": "Saudável",
+      "id": "vIVl8yEqf9g"
+    },
+    {
+      "nome": "Maria Eduarda",
+      "altura": 1.67,
+      "peso": 50,
+      "IMC": 17.92821542543655,
+      "textoSituacao": "Magreza leve",
+      "id": "HMPZVhNClQI"
+    },
+    {
+      "nome": "Marcos",
+      "altura": 1.72,
+      "peso": 76,
+      "IMC": 25.689561925365066,
+      "textoSituacao": "Sobrepeso",
+      "id": "P6TwRefvQrk"
+    },
+    {
+      "nome": "João",
+      "altura": 1.78,
+      "peso": 88,
+      "IMC": 27.77427092538821,
+      "textoSituacao": "Sobrepeso",
+      "id": "FQWXW1sAHeI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
