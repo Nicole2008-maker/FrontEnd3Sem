@@ -1,0 +1,21 @@
+
+.card-perfil{
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+
+}
+
+.card-perfil__image{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    border: 1px solid white;;
+}
