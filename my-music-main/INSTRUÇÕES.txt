@@ -1,0 +1,59 @@
+BAIXAR O PROJETO MY-MUSIC E DESCOMPACTAR E ABRIR COM O VSCODE
+https://github.com/eduardocostaprofessor/my-music
+
+
+Atividade – Cadastro de Músicas Favoritas 🎵
+Objetivo
+
+Desenvolver uma aplicação React capaz de:
+
+	-Listar músicas cadastradas
+	-Cadastrar novas músicas
+	-Excluir músicas da lista
+
+A aplicação deverá utilizar um db.json como banco de dados fake utilizando o json-server.
+
+O usuário deverá preencher:
+
+	Nome da música
+	Nome do artista
+
+Ao clicar no botão Cadastrar, a música deverá ser salva no banco (db.json).
+
+
+Você deverá utilizar:
+
+	useState
+	onChange
+	onClick
+	axios (já tem o services e o axios pronto)
+	map()
+	json-server
+
+
+Crie um arquivo chamado db.json na raiz do projeto com o seguinte conteúdo:
+
+	{
+	  "musicas": [
+	    {
+	      "id": 1,
+	      "nome": "Blinding Lights",
+	      "artista": "The Weeknd"
+	    }
+	  ]
+	}
+
+
+Execute o servidor:
+
+	json-server --watch db.json --port 3001
+
+Critérios de avaliação
+	Critério	Pontos
+	Cadastro funcionando	2
+	Listagem com map()	2
+	Exclusão de músicas	2
+	Uso correto de states	2
+	Organização e interface	2
+
+Total: 10 pontos

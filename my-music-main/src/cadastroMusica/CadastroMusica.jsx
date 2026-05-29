@@ -1,4 +1,4 @@
-import "./CadastroGenero.css";
+import "./CadastroMusica.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Cadastro from "../../components/cadastro/Cadastro";
@@ -8,10 +8,10 @@ import api from "../../Services/Services";
 import Swal from "sweetalert2";
 import { Alerta } from "../../components/alerta/Alerta";
 
-const CadastroGenero = () => {
+const CadastroMusica = () => {
 
     const [valor, setValor] = useState("")
-    const [listaGeneros, setListaGeneros] = useState([])
+    const [listaMusica, setListaGeneros] = useState([])
     const [editar, setEditar] = useState(false)
     const [id, setId] = useState(0)
 
@@ -23,7 +23,7 @@ const CadastroGenero = () => {
             setListaGeneros(retornoAPI.data)
         } catch (error) {
             Swal.fire({
-                title: 'Cadastro de Gênero',
+                title: 'Cadastro de Musica',
                 text: `${valor} Problemas ao carregar os dados da API`,
                 icon: 'error',
                 confirmButtonText: 'Top'
@@ -40,13 +40,13 @@ const CadastroGenero = () => {
 
 
 
-    const cadastrarGenero = async (e) => {
+    const cadastrarMusica = async (e) => {
         e.preventDefault();
 
         if (valor.trim().length == 0) {
             Alerta({
-                title: 'Cadastro de Gênero',
-                text: `${valor} Preencher o campo genero`,
+                title: 'Cadastro de Musica',
+                text: `${valor} Preencher o campo musica`,
                 icon: 'error',
                 confirmButtonText: 'Cool'
             })
@@ -68,7 +68,7 @@ const CadastroGenero = () => {
 
             const retornoAPI = await api.post("/Genero", objCadastros)
             Alerta({
-                title: "Cadastro de Gênero",
+                title: "Cadastro de Musica",
                 text: `${valor} Cadastrado com sucesso`,
                 icon: 'sucess',
                 confirmButtonText: "Top!"
@@ -78,7 +78,7 @@ const CadastroGenero = () => {
             limparFormulario()
         } catch (error) {
             Alerta({
-                title: 'Cadastro de Gênero',
+                title: 'Cadastro de Musica',
                 text: `${valor} Erro ao cadastrar na API`,
                 icon: 'error',
                 confirmButtonText: 'Ok'
@@ -95,11 +95,11 @@ const CadastroGenero = () => {
 
 
 
-    const excluirGenero = async (item) => {
+    const excluirMusica = async (item) => {
 
 
         const result = await Alerta({
-            title: "Cadastro de Gênero",
+            title: "Cadastro de Musica",
             text: `Quer apagar este genero ${item.nome}?`,
             icon: "warning",
             showCancelButton: true,
@@ -122,7 +122,7 @@ const CadastroGenero = () => {
             if (retornoAPI.status == 200 || retornoAPI.status == 204) {
 
                  Alerta({
-                    title: 'Cadastro de Gênero',
+                    title: 'Cadastro de Musica',
                     text: `${valor} Apagado com sucesso`,
                     icon: 'sucesss',
                     confirmButtonText: 'Top!'
@@ -131,8 +131,8 @@ const CadastroGenero = () => {
             } else {
 
                 Alerta({
-                    title: 'Cadastro de Gênero',
-                    text: `${valor} Problemas ao apagar o genero`,
+                    title: 'Cadastro de Musica',
+                    text: `${valor} Problemas ao apagar a musica`,
                     icon: 'error',
                     confirmButtonText: 'Ok'
                 })
@@ -142,7 +142,7 @@ const CadastroGenero = () => {
         } catch (error) {
 
             Alerta({
-                title: 'Cadastro de Gênero',
+                title: 'Cadastro de Musia',
                 text: `${valor} Erro ao cadastrar na API`,
                 icon: 'error',
                 confirmButtonText: 'Ok'
@@ -159,13 +159,13 @@ const CadastroGenero = () => {
         setId(item.id)
     }
 
-    const editarGenero = async (e) => {
+    const editarMusica = async (e) => {
         e.preventDefault();
 
         if (valor.trim().length == 0) {
 
             Alerta({
-                title: 'Cadastro de Gênero',
+                title: 'Cadastro de Musica',
                 text: `${valor} Preencher o genero`,
                 icon: 'error',
                 confirmButtonText: 'Ok'
@@ -182,8 +182,8 @@ const CadastroGenero = () => {
             getGeneros()
 
             Alerta({
-                title: 'Cadastro de Gênero',
-                text: `${valor} Genero atualizado`,
+                title: 'Cadastro de Musica',
+                text: `${valor} Musica atualizada`,
                 icon: 'sucess',
                 confirmButtonText: 'Ok'
             })
@@ -211,16 +211,16 @@ const CadastroGenero = () => {
                 {/*Form de cadastro de Generos*/}
                 <Cadastro
                     //Define o título que será exibido no formulário
-                    tituloCadastro="Cadastro de Gênero"
+                    tituloCadastro="Cadastro de Musica"
                     // esconde o select de genero
                     visibilidade="none"
                     // Define o texto que aparece dentro do campo de input
-                    placeholder="gênero"
+                    placeholder="musica"
                     // ----------------------------------------------------
                     // Propriedades voltada ao cadastro:
 
                     //Função que será chamada ao enviar o formulário (onSubmit)
-                    funcCadastro={editar ? editarGenero : cadastrarGenero}
+                    funcCadastro={editar ? editarMusica : cadastrarMusica}
                     //Valor atual do campo de texto
                     valor={valor}
                     //Função que atualiza o estado do valor no componente pai sempre que o usuário digita no campo
@@ -230,16 +230,16 @@ const CadastroGenero = () => {
                 />
 
                 <Lista
-                    tituloLista="Lista de Gêneros"
+                    tituloLista="Lista de Musica"
                     visibilidade="none"
 
                     //Chama o método para validar:
-                    lista={listaGeneros}
+                    lista={listaMusica}
                     //Identifica o tipo de lista:
                     tipoLista="genero"
 
 
-                    funcExcluir={excluirGenero}
+                    funcExcluir={excluirMusica}
                     funcEditar={preEditar}
                 />
 
@@ -250,4 +250,4 @@ const CadastroGenero = () => {
     )
 };
 
-export default CadastroGenero;
+export default CadastroMusica;
