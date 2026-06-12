@@ -10,45 +10,21 @@ const CadastroFilme = () => {
   //States e Variavies
   const [valor, setValor] = useState("")
   const [editar, setEditar] = useState(false)
-  const [listaFilmes, setListaFilmes] = useState([
-{
-  idGenero: 1,
-  titulo: "Gente Grande 2",
- genero: { idGenero: 2, nome: "Comédia"},
-},
-
-{
-  idGenero: 2,
-  titulo: "Assim na Terra Como no Inferno",
- genero: { idGenero: 2, nome: "Terror"},
-},
-
-{
-  idGenero: 3,
-  titulo: "A Múmia",
- genero: { idGenero: 2, nome: "Ação"},
-}
-
-  ]);
+  const [listaFilmes, setListaFilmes] = useState([]);
 
 
-  const [listaGeneros, setListaGeneros] = useState([
-  
-    { idGenero: 1, nome: "Ação" },
-    { idGenero: 2, nome: "Comédia" },
-    { idGenero: 3, nome: "Romance" },
-    { idGenero: 4, nome: "Terror" },
-    { idGenero: 4, nome: "Drama" },
-  ])
+  const [listaGeneros, setListaGeneros] = useState([])
 
-  const getGeneros = () => {
-    try {
-
+  const getGeneros = async () => {
+    try { 
+      const retornoAPI = await api.get("/Genero");
+      setListaGeneros(retornoAPI.data);
     } catch (error) {
+      alert("Problemas ao carregar os dados da API");
 
     }
-  }
-
+  };
+  
 
   const getFilmes = () => {
     Alerta({
