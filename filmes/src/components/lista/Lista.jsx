@@ -3,6 +3,7 @@ import "./Lista.css";
 // Importação de imagens:
 import Editar from "../../assets/img/pen-to-square-solid.svg";
 import Excluir from "../../assets/img/trash-can-regular.svg";
+import api, { localAPIImagePath } from "../../services/Services";
 
 const Lista = (props) => {
     return (
@@ -20,6 +21,7 @@ const Lista = (props) => {
                                 {/* th => table head */}
                                 <th>Nome</th>
                                 <th style={{ display: props.visibilidade }}>Gênero</th>
+                                <th style={{ display: props.visibilidade }}>Imagem</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
                             </tr>
@@ -30,7 +32,7 @@ const Lista = (props) => {
                             {props.lista && props.lista.length > 0 ? (
                                 // Se houver itens, faz um map (laço) para renderizar cada item da lista
                                 props.lista.map((item) => (
-                                    <tr className="item_lista" key={item.id}>
+                                    <tr className="item_lista" key={Math.random()}>
                                         {/* {console.log(index)} */}
                                         {/* {console.log(item.idGenero)} */}
                                         <td data-cell="Nome">
@@ -41,7 +43,12 @@ const Lista = (props) => {
                                         <td data-cell="Gênero" style={{ display: props.visibilidade }}>
                                             {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "filme".*/}
                                             {/* adicionar essa linha depois de fazer o metd de lista filme: */}
-                                            {props.tipoLista === "filme" ? (item.genero?.nome || '-') : '-'}
+                                            {props.tipoLista === "filme" ? (item.idGeneroNavigation?.nome || '-') : '-'}
+                                        </td>
+                                        <td data-cell="Gênero" style={{ display: props.visibilidade }}>
+                                            {/* Segunda célula: mostra o nome do gênero caso o tipo da lista seja "filme".*/}
+                                            {/* adicionar essa linha depois de fazer o metd de lista filme: */}
+                                            {props.tipoLista === "filme" ?  <img src={`${localAPIImagePath}/${item.imagem}`} /> : '-'}
                                         </td>
                                         <td data-cell="Editar">
                                             <button className="icon" onClick={() => (props.funcEditar(item))}>

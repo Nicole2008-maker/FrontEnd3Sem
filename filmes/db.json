@@ -1,24 +1,16 @@
 {
   "Genero": [
     {
-      "nome": "Terror",
-      "id": "y_Mof8PGjoQ"
+      "nome": "Eduardo",
+      "id": "8zE7tUOt5gU"
     },
     {
-      "nome": "Suspense",
-      "id": "ZNbVtftFrfk"
+      "nome": "Comédia",
+      "id": "fBpIkW51d5A"
     },
     {
-      "nome": "Romance",
-      "id": "RffGL8K0Wwc"
-    },
-    {
-      "nome": "Drama",
-      "id": "1l3E7q-FBio"
-    },
-    {
-      "nome": "Marcos",
-      "id": "w2DkK9IYBmA"
+      "nome": "edu",
+      "id": "TFJ0Py7W_kk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
